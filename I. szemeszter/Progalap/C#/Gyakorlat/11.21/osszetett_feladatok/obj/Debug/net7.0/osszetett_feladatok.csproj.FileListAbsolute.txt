@@ -1,0 +1,15 @@
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\11.21\osszetett_feladatok\obj\Debug\net7.0\osszetett_feladatok.csproj.AssemblyReference.cache
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\11.21\osszetett_feladatok\obj\Debug\net7.0\osszetett_feladatok.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\11.21\osszetett_feladatok\obj\Debug\net7.0\osszetett_feladatok.AssemblyInfoInputs.cache
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\11.21\osszetett_feladatok\obj\Debug\net7.0\osszetett_feladatok.AssemblyInfo.cs
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\11.21\osszetett_feladatok\obj\Debug\net7.0\osszetett_feladatok.csproj.CoreCompileInputs.cache
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\11.21\osszetett_feladatok\bin\Debug\net7.0\osszetett_feladatok.exe
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\11.21\osszetett_feladatok\bin\Debug\net7.0\osszetett_feladatok.deps.json
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\11.21\osszetett_feladatok\bin\Debug\net7.0\osszetett_feladatok.runtimeconfig.json
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\11.21\osszetett_feladatok\bin\Debug\net7.0\osszetett_feladatok.dll
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\11.21\osszetett_feladatok\bin\Debug\net7.0\osszetett_feladatok.pdb
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\11.21\osszetett_feladatok\obj\Debug\net7.0\osszetett_feladatok.dll
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\11.21\osszetett_feladatok\obj\Debug\net7.0\refint\osszetett_feladatok.dll
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\11.21\osszetett_feladatok\obj\Debug\net7.0\osszetett_feladatok.pdb
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\11.21\osszetett_feladatok\obj\Debug\net7.0\osszetett_feladatok.genruntimeconfig.cache
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\11.21\osszetett_feladatok\obj\Debug\net7.0\ref\osszetett_feladatok.dll

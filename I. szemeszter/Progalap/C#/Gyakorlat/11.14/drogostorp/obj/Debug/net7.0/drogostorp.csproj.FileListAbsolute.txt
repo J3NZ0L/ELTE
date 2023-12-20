@@ -1,0 +1,15 @@
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\11.14\drogostorp\obj\Debug\net7.0\drogostorp.csproj.AssemblyReference.cache
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\11.14\drogostorp\obj\Debug\net7.0\drogostorp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\11.14\drogostorp\obj\Debug\net7.0\drogostorp.AssemblyInfoInputs.cache
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\11.14\drogostorp\obj\Debug\net7.0\drogostorp.AssemblyInfo.cs
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\11.14\drogostorp\obj\Debug\net7.0\drogostorp.csproj.CoreCompileInputs.cache
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\11.14\drogostorp\bin\Debug\net7.0\drogostorp.exe
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\11.14\drogostorp\bin\Debug\net7.0\drogostorp.deps.json
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\11.14\drogostorp\bin\Debug\net7.0\drogostorp.runtimeconfig.json
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\11.14\drogostorp\bin\Debug\net7.0\drogostorp.dll
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\11.14\drogostorp\bin\Debug\net7.0\drogostorp.pdb
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\11.14\drogostorp\obj\Debug\net7.0\drogostorp.dll
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\11.14\drogostorp\obj\Debug\net7.0\refint\drogostorp.dll
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\11.14\drogostorp\obj\Debug\net7.0\drogostorp.pdb
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\11.14\drogostorp\obj\Debug\net7.0\drogostorp.genruntimeconfig.cache
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\11.14\drogostorp\obj\Debug\net7.0\ref\drogostorp.dll

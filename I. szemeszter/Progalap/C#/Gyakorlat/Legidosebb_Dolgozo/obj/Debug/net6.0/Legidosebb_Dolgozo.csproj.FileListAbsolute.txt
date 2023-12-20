@@ -1,0 +1,15 @@
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\Gyakorlat\Legidosebb_Dolgozo\bin\Debug\net6.0\Legidosebb_Dolgozo.exe
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\Gyakorlat\Legidosebb_Dolgozo\bin\Debug\net6.0\Legidosebb_Dolgozo.deps.json
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\Gyakorlat\Legidosebb_Dolgozo\bin\Debug\net6.0\Legidosebb_Dolgozo.runtimeconfig.json
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\Gyakorlat\Legidosebb_Dolgozo\bin\Debug\net6.0\Legidosebb_Dolgozo.dll
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\Gyakorlat\Legidosebb_Dolgozo\bin\Debug\net6.0\Legidosebb_Dolgozo.pdb
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\Gyakorlat\Legidosebb_Dolgozo\obj\Debug\net6.0\Legidosebb_Dolgozo.csproj.AssemblyReference.cache
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\Gyakorlat\Legidosebb_Dolgozo\obj\Debug\net6.0\Legidosebb_Dolgozo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\Gyakorlat\Legidosebb_Dolgozo\obj\Debug\net6.0\Legidosebb_Dolgozo.AssemblyInfoInputs.cache
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\Gyakorlat\Legidosebb_Dolgozo\obj\Debug\net6.0\Legidosebb_Dolgozo.AssemblyInfo.cs
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\Gyakorlat\Legidosebb_Dolgozo\obj\Debug\net6.0\Legidosebb_Dolgozo.csproj.CoreCompileInputs.cache
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\Gyakorlat\Legidosebb_Dolgozo\obj\Debug\net6.0\Legidosebb_Dolgozo.dll
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\Gyakorlat\Legidosebb_Dolgozo\obj\Debug\net6.0\refint\Legidosebb_Dolgozo.dll
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\Gyakorlat\Legidosebb_Dolgozo\obj\Debug\net6.0\Legidosebb_Dolgozo.pdb
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\Gyakorlat\Legidosebb_Dolgozo\obj\Debug\net6.0\Legidosebb_Dolgozo.genruntimeconfig.cache
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\Gyakorlat\Legidosebb_Dolgozo\obj\Debug\net6.0\ref\Legidosebb_Dolgozo.dll

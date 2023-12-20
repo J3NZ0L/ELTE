@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="386.93" height="387.2" viewBox="0 0 580.39 580.8" preserveAspectRatio="xMinYMin meet">
+<metadata>
+<structo:source xmlns:structo="https://nigjo.github.io/structogramview/">
+<![CDATA[BE: N, orhelyvektor
+orzottfalak: Tömb[1..N:Egész]
+orzottfalak[1]:=0
+FOR: i:=2..N
+   IF: Nem(orhelyvektor[i-1] Vagy orhelyvektor[i])
+      orzottfalak[i]:=orzottfalak[i-1]+1
+   ELSE:
+      orzottfalak[i]:=0
+   ENDIF:
+ENDFOR:
+maxertek:=orzottfalak[1]
+FOR: i:=1..N
+   IF: orzottfalak[i]>maxertek
+      maxertek:=orzottfalak[i]
+   ENDIF:
+ENDFOR:
+KI: maxertek]]>
+</structo:source>
+</metadata>
+<style>
+svg{stroke:none;stroke-width:1px;fill:white;}
+line{stroke:black;}
+text{font-family:sans-serif;fill:black;}
+.comment&gt;text{font-style:italic;fill:gray;}
+.whiteShadow{fill:none !important;stroke:white;stroke-width:2px;}
+.casevalue,.blocktitle{fill:gray;font-size:75%;font-style:italic;}
+.caption{font-weight:bold;font-size:1.25em;}
+svg{font-size:24px}</style>
+<g class="diagram" transform="translate(0,0)">
+<rect width="580.39" height="580.8"/>
+<g class="sequence" transform="translate(12,12)">
+<line x1="556.39" y1="0" x2="556.39" y2="49.2"/>
+<line x1="0" y1="0" x2="0" y2="49.2"/>
+<line x1="0" y1="0" x2="556.39" y2="0"/>
+<text x="6" y="33" textLength="207">BE: N, orhelyvektor</text>
+</g>
+<g class="sequence" transform="translate(12,61.2)">
+<line x1="556.39" y1="0" x2="556.39" y2="49.2"/>
+<line x1="0" y1="0" x2="0" y2="49.2"/>
+<line x1="0" y1="0" x2="556.39" y2="0"/>
+<text x="6" y="33" textLength="315">orzottfalak: Tömb[1..N:Egész]</text>
+</g>
+<g class="sequence" transform="translate(12,110.4)">
+<line x1="556.39" y1="0" x2="556.39" y2="49.2"/>
+<line x1="0" y1="0" x2="0" y2="49.2"/>
+<line x1="0" y1="0" x2="556.39" y2="0"/>
+<text x="6" y="33" textLength="171">orzottfalak[1]:=0</text>
+</g>
+<g class="for" transform="translate(12,159.6)">
+<line x1="556.39" y1="0" x2="556.39" y2="154.8"/>
+<line x1="0" y1="0" x2="0" y2="154.8"/>
+<line x1="0" y1="0" x2="556.39" y2="0"/>
+<text x="12" y="33" textLength="70.5">i:=2..N</text>
+<g class="block" transform="translate(37.2,49.2)">
+<g class="if" transform="translate(0,0)">
+<line x1="0" y1="0" x2="0" y2="105.6"/>
+<line x1="0" y1="0" x2="517.99" y2="0"/>
+<line x1="0" y1="0" x2="341.66" y2="55.2"/>
+<line x1="341.66" y1="55.2" x2="517.99" y2="0"/>
+<text x="32.25" y="27" textLength="453" class="whiteShadow">Nem(orhelyvektor[i-1] Vagy orhelyvektor[i])</text>
+<text x="32.25" y="27" textLength="453">Nem(orhelyvektor[i-1] Vagy orhelyvektor[i])</text>
+<g class="then" transform="translate(1.2,55.2)">
+<text x="4.5" y="-6" textLength="31.5" class="blocktitle">true</text>
+<g class="sequence" transform="translate(0,0)">
+<line x1="-1.5" y1="0" x2="341.66" y2="0"/>
+<line x1="0" y1="50.4" x2="340.16" y2="50.4"/>
+<text x="6" y="33" textLength="328.5">orzottfalak[i]:=orzottfalak[i-1]+1</text>
+</g>
+</g>
+<g class="else" transform="translate(341.36,55.2)">
+<line x1="0" y1="0" x2="0" y2="50.4"/>
+<text x="132.9" y="-6" textLength="37.5" class="blocktitle">false</text>
+<g class="sequence" transform="translate(1.2,0)">
+<line x1="-1.5" y1="0" x2="176.93" y2="0"/>
+<line x1="0" y1="50.4" x2="175.43" y2="50.4"/>
+<text x="6" y="33" textLength="163.5">orzottfalak[i]:=0</text>
+</g>
+</g>
+</g>
+</g>
+</g>
+<g class="sequence" transform="translate(12,314.4)">
+<line x1="556.39" y1="0" x2="556.39" y2="49.2"/>
+<line x1="0" y1="0" x2="0" y2="49.2"/>
+<line x1="0" y1="0" x2="556.39" y2="0"/>
+<text x="6" y="33" textLength="256.5">maxertek:=orzottfalak[1]</text>
+</g>
+<g class="for" transform="translate(12,363.6)">
+<line x1="556.39" y1="0" x2="556.39" y2="154.8"/>
+<line x1="0" y1="0" x2="0" y2="154.8"/>
+<line x1="0" y1="0" x2="556.39" y2="0"/>
+<text x="12" y="33" textLength="70.5">i:=1..N</text>
+<g class="block" transform="translate(37.2,49.2)">
+<g class="if" transform="translate(0,0)">
+<line x1="0" y1="0" x2="0" y2="105.6"/>
+<line x1="0" y1="0" x2="517.99" y2="0"/>
+<line x1="0" y1="0" x2="405.02" y2="55.2"/>
+<line x1="405.02" y1="55.2" x2="517.99" y2="0"/>
+<text x="138" y="27" textLength="241.5" class="whiteShadow">orzottfalak[i]&gt;maxertek</text>
+<text x="138" y="27" textLength="241.5">orzottfalak[i]&gt;maxertek</text>
+<g class="then" transform="translate(1.2,55.2)">
+<text x="4.5" y="-6" textLength="31.5" class="blocktitle">true</text>
+<g class="sequence" transform="translate(0,0)">
+<line x1="-1.5" y1="0" x2="405.02" y2="0"/>
+<line x1="0" y1="50.4" x2="403.52" y2="50.4"/>
+<text x="6" y="33" textLength="249">maxertek:=orzottfalak[i]</text>
+</g>
+</g>
+<g class="else" transform="translate(404.72,55.2)">
+<line x1="0" y1="0" x2="0" y2="50.4"/>
+<text x="69.53" y="-6" textLength="37.5" class="blocktitle">false</text>
+<g class="sequence" transform="translate(1.2,0)">
+<line x1="-1.5" y1="0" x2="113.55" y2="0"/>
+<line x1="0" y1="50.4" x2="112.05" y2="50.4"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<g class="sequence" transform="translate(12,518.4)">
+<line x1="556.39" y1="0" x2="556.39" y2="50.4"/>
+<line x1="0" y1="0" x2="0" y2="50.4"/>
+<line x1="0" y1="0" x2="556.39" y2="0"/>
+<line x1="0" y1="50.4" x2="556.39" y2="50.4"/>
+<text x="6" y="33" textLength="135">KI: maxertek</text>
+</g>
+</g>
+</svg>

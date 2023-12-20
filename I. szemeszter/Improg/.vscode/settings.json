@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "matrix_printer.h": "c",
+        "string.h": "c"
+    }
+}

@@ -1,0 +1,15 @@
+To create new project:
+    dotnet new console -o app
+    cd app
+    code . # to open project in VSCode
+
+To run:
+    dotnet run
+
+To debug:
+    Command palette: search for .Net Generate Assets for Build and debug
+    then: go to the Run adn debug tab in vsc, set breakpoints, click on the play button
+
+To compile after debug:
+    dotnet build-> creates exe file
+    

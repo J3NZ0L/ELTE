@@ -1,0 +1,5 @@
+[("Fire", 6), ("Shadow", 5), ("Fire", 55), ("Shadow", 50), ("Air", 51), ("Fire", 110), ("Shadow", 105), ("Air", 5), ("Air", 60), ("Shadow", 99)] 
+--> kivununk 6ot minden mas firebol ("Shadow", 5), ("Fire", 49), ("Shadow", 50), ("Air", 51), ("Fire", 104), ("Shadow", 105), ("Air", 5), ("Air", 60), ("Shadow", 99)] 
+meghivom xs-re
+--> kivonunk 5ot minden mas shadowbol ("Fire", 49), ("Shadow", 45), ("Air", 51), ("Fire", 104), ("Shadow", 100), ("Air", 5), ("Air", 60), ("Shadow", 94)] 
+--> kivonunk 49et minden mas firebol ("Shadow", 45), ("Air", 51), ("Fire", 55), ("Shadow", 100), ("Air", 5), ("Air", 60), ("Shadow", 94)] 

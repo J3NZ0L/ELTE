@@ -1,0 +1,15 @@
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Hazifeladat\10.24_S5\obj\Debug\net7.0\10.24_S5.csproj.AssemblyReference.cache
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Hazifeladat\10.24_S5\obj\Debug\net7.0\10.24_S5.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Hazifeladat\10.24_S5\obj\Debug\net7.0\10.24_S5.AssemblyInfoInputs.cache
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Hazifeladat\10.24_S5\obj\Debug\net7.0\10.24_S5.AssemblyInfo.cs
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Hazifeladat\10.24_S5\obj\Debug\net7.0\10.24_S5.csproj.CoreCompileInputs.cache
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Hazifeladat\10.24_S5\bin\Debug\net7.0\10.24_S5.exe
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Hazifeladat\10.24_S5\bin\Debug\net7.0\10.24_S5.deps.json
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Hazifeladat\10.24_S5\bin\Debug\net7.0\10.24_S5.runtimeconfig.json
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Hazifeladat\10.24_S5\bin\Debug\net7.0\10.24_S5.dll
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Hazifeladat\10.24_S5\bin\Debug\net7.0\10.24_S5.pdb
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Hazifeladat\10.24_S5\obj\Debug\net7.0\10.24_S5.dll
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Hazifeladat\10.24_S5\obj\Debug\net7.0\refint\10.24_S5.dll
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Hazifeladat\10.24_S5\obj\Debug\net7.0\10.24_S5.pdb
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Hazifeladat\10.24_S5\obj\Debug\net7.0\10.24_S5.genruntimeconfig.cache
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Hazifeladat\10.24_S5\obj\Debug\net7.0\ref\10.24_S5.dll

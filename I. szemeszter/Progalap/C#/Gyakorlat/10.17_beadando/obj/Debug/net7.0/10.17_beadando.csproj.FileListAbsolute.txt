@@ -1,0 +1,15 @@
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\10.17_beadando\obj\Debug\net7.0\10.17_beadando.csproj.AssemblyReference.cache
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\10.17_beadando\obj\Debug\net7.0\10.17_beadando.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\10.17_beadando\obj\Debug\net7.0\10.17_beadando.AssemblyInfoInputs.cache
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\10.17_beadando\obj\Debug\net7.0\10.17_beadando.AssemblyInfo.cs
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\10.17_beadando\obj\Debug\net7.0\10.17_beadando.csproj.CoreCompileInputs.cache
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\10.17_beadando\bin\Debug\net7.0\10.17_beadando.exe
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\10.17_beadando\bin\Debug\net7.0\10.17_beadando.deps.json
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\10.17_beadando\bin\Debug\net7.0\10.17_beadando.runtimeconfig.json
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\10.17_beadando\bin\Debug\net7.0\10.17_beadando.dll
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\10.17_beadando\bin\Debug\net7.0\10.17_beadando.pdb
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\10.17_beadando\obj\Debug\net7.0\10.17_beadando.dll
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\10.17_beadando\obj\Debug\net7.0\refint\10.17_beadando.dll
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\10.17_beadando\obj\Debug\net7.0\10.17_beadando.pdb
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\10.17_beadando\obj\Debug\net7.0\10.17_beadando.genruntimeconfig.cache
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\10.17_beadando\obj\Debug\net7.0\ref\10.17_beadando.dll

@@ -1,0 +1,15 @@
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\Gyakorlat\10.03\obj\Debug\net6.0\10.03.csproj.AssemblyReference.cache
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\Gyakorlat\10.03\obj\Debug\net6.0\10.03.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\Gyakorlat\10.03\obj\Debug\net6.0\10.03.AssemblyInfoInputs.cache
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\Gyakorlat\10.03\obj\Debug\net6.0\10.03.AssemblyInfo.cs
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\Gyakorlat\10.03\obj\Debug\net6.0\10.03.csproj.CoreCompileInputs.cache
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\Gyakorlat\10.03\bin\Debug\net6.0\10.03.exe
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\Gyakorlat\10.03\bin\Debug\net6.0\10.03.deps.json
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\Gyakorlat\10.03\bin\Debug\net6.0\10.03.runtimeconfig.json
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\Gyakorlat\10.03\bin\Debug\net6.0\10.03.dll
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\Gyakorlat\10.03\bin\Debug\net6.0\10.03.pdb
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\Gyakorlat\10.03\obj\Debug\net6.0\10.03.dll
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\Gyakorlat\10.03\obj\Debug\net6.0\refint\10.03.dll
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\Gyakorlat\10.03\obj\Debug\net6.0\10.03.pdb
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\Gyakorlat\10.03\obj\Debug\net6.0\10.03.genruntimeconfig.cache
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\Gyakorlat\10.03\obj\Debug\net6.0\ref\10.03.dll

@@ -1,0 +1,7 @@
+DB7ZTC
+db7ztc
+
+
+ls -1 /tmp | sort | head -n `date +%S`
+cat $(ls | grep `date +%u`)/orak | head -n 1
+

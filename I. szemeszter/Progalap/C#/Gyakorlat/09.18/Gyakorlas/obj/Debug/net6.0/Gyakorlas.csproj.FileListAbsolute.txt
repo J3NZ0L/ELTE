@@ -1,0 +1,15 @@
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\09.18\Gyakorlas\bin\Debug\net6.0\Gyakorlas.exe
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\09.18\Gyakorlas\bin\Debug\net6.0\Gyakorlas.deps.json
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\09.18\Gyakorlas\bin\Debug\net6.0\Gyakorlas.runtimeconfig.json
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\09.18\Gyakorlas\bin\Debug\net6.0\Gyakorlas.dll
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\09.18\Gyakorlas\bin\Debug\net6.0\Gyakorlas.pdb
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\09.18\Gyakorlas\obj\Debug\net6.0\Gyakorlas.csproj.AssemblyReference.cache
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\09.18\Gyakorlas\obj\Debug\net6.0\Gyakorlas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\09.18\Gyakorlas\obj\Debug\net6.0\Gyakorlas.AssemblyInfoInputs.cache
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\09.18\Gyakorlas\obj\Debug\net6.0\Gyakorlas.AssemblyInfo.cs
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\09.18\Gyakorlas\obj\Debug\net6.0\Gyakorlas.csproj.CoreCompileInputs.cache
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\09.18\Gyakorlas\obj\Debug\net6.0\Gyakorlas.dll
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\09.18\Gyakorlas\obj\Debug\net6.0\refint\Gyakorlas.dll
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\09.18\Gyakorlas\obj\Debug\net6.0\Gyakorlas.pdb
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\09.18\Gyakorlas\obj\Debug\net6.0\Gyakorlas.genruntimeconfig.cache
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Prog\C#\09.18\Gyakorlas\obj\Debug\net6.0\ref\Gyakorlas.dll

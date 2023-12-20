@@ -1,0 +1,1 @@
+﻿Write-Output (Select-String -Pattern "S" -Path "FAT.dat" | Measure-Object).Count

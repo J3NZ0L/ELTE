@@ -1,0 +1,15 @@
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\10.24\orai_feladatok\obj\Debug\net7.0\orai_feladatok.csproj.AssemblyReference.cache
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\10.24\orai_feladatok\obj\Debug\net7.0\orai_feladatok.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\10.24\orai_feladatok\obj\Debug\net7.0\orai_feladatok.AssemblyInfoInputs.cache
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\10.24\orai_feladatok\obj\Debug\net7.0\orai_feladatok.AssemblyInfo.cs
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\10.24\orai_feladatok\obj\Debug\net7.0\orai_feladatok.csproj.CoreCompileInputs.cache
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\10.24\orai_feladatok\bin\Debug\net7.0\orai_feladatok.exe
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\10.24\orai_feladatok\bin\Debug\net7.0\orai_feladatok.deps.json
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\10.24\orai_feladatok\bin\Debug\net7.0\orai_feladatok.runtimeconfig.json
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\10.24\orai_feladatok\bin\Debug\net7.0\orai_feladatok.dll
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\10.24\orai_feladatok\bin\Debug\net7.0\orai_feladatok.pdb
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\10.24\orai_feladatok\obj\Debug\net7.0\orai_feladatok.dll
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\10.24\orai_feladatok\obj\Debug\net7.0\refint\orai_feladatok.dll
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\10.24\orai_feladatok\obj\Debug\net7.0\orai_feladatok.pdb
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\10.24\orai_feladatok\obj\Debug\net7.0\orai_feladatok.genruntimeconfig.cache
+C:\Users\jeney\Documents\ELTE\I. szemeszter\Progalap\C#\Gyakorlat\10.24\orai_feladatok\obj\Debug\net7.0\ref\orai_feladatok.dll
