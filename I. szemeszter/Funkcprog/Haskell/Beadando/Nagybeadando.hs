@@ -21,7 +21,7 @@ module Nagybeadando where
 
 
     data Entity = Golem Health | HaskellElemental Health
-        deriving (Show)
+        deriving (Show, Eq)
 
     showJustEntityName :: Entity -> String
     showJustEntityName (Golem _) = "Golem"
@@ -71,8 +71,12 @@ module Nagybeadando where
         M (Dead) == M(Alive s) = False
         E(Dead) == E(Alive s) = False
         E(Alive s) == E (Dead) = False 
-        M (s1) == M (s2) = show(showUnit(s2)) == show(showUnit(s1))
-        E (s1) == E (s2) = show(showUnit(s2)) == show(showUnit(s1))
+       -- M (s1) == M (s2) = show(showUnit(s2)) == show(showUnit(s1))
+       -- E (s1) == E (s2) = show(showUnit(s2)) == show(showUnit(s1))
+        M (Alive m1) == M (Alive m2) = m1 == m2
+        E (Alive e1) == E (Alive e2) = e1 == e2
+        M (Dead) == M (Dead) = True
+        E (Dead) == E (Dead) = True
         _ == _ = False
 
     formationFix :: Army -> Army  
