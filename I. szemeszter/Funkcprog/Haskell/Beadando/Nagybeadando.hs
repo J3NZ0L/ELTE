@@ -39,7 +39,7 @@ module Nagybeadando where
     java = Master "Java" 100 (\x ->  x - (mod x 9))
     traktor = Master "Traktor" 20 (\x -> div (x + 10) ((mod x 4) + 1))
     jani = Master "Jani" 100 (\x -> x - div x 4)
-    skver = Master "Skver" 100 (\x -> div (x+4) 2)
+    skver = M (Alive (Master "Dead" 10 (subtract 1)))
     potionMaster = 
         let plx x
                 | x > 85  = x - plx (div x 2)
@@ -63,10 +63,14 @@ module Nagybeadando where
 --        show :: Unit -> String
         show (M s) = tail $ init $ showMage . showState $ s
         show (E s) = show s
-
+        
     --2. feladat
     
     instance Eq Unit where
+        M (Alive s) == M (Dead) = False
+        M (Dead) == M(Alive s) = False
+        E(Dead) == E(Alive s) = False
+        E(Alive s) == E (Dead) = False 
         M (s1) == M (s2) = show(showUnit(s2)) == show(showUnit(s1))
         E (s1) == E (s2) = show(showUnit(s2)) == show(showUnit(s1))
         _ == _ = False
@@ -78,14 +82,16 @@ module Nagybeadando where
             go :: Army -> Army -> Army -> Army
             go [] alive_acc dead_acc = reverse(alive_acc)++reverse(dead_acc)
             go (x:xs) alive_acc dead_acc
-                |  showState x == "Dead" = go xs alive_acc (x:dead_acc)
+                | not( isAlive x)= go xs alive_acc (x:dead_acc)
                 | otherwise = go xs (x:alive_acc) dead_acc
                 
+    --formationFix [E Dead,M (Alive (Master "Dead" 10 (subtract 1)))] == [M (Alive (Master "Dead" 10 (subtract 1))),E Dead]
+
     --3. feladat
 
     over :: Army -> Bool
     over [] = True
-    over (x:xs)= showState x == "Dead" && over xs
+    over (x:xs)= not( isAlive x) && over xs
         
     --4. feladat
     
