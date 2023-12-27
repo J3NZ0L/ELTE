@@ -3,9 +3,10 @@
 #include "matrix_printer.h"
 #include "matrix_saver.h"
 #include "matrix_importer.h"
-//fel van toltve githubra
+
 int main(){
     int** actual_matrix=NULL;
+    char file_name[13];
     int dim;
     bool rotation; //cw
     int direction; //f
@@ -13,16 +14,16 @@ int main(){
 
     int choice; // Elso valasztas bekerese
     scanf("%d",&choice);
-    fociklus(&choice,actual_matrix,&dim,&rotation,&direction);
+    fociklus(&choice,actual_matrix,&dim,&rotation,&direction, file_name);
 
     return 0;
 }
 
-void fociklus(int* Choice, int** Matrix,int* dimension, bool* rotation, int* direction){
+void fociklus(int* Choice, int** Matrix,int* dimension, bool* rotation, int* direction, char* file_name){
     printf("\n"); 
     while (*Choice<0 || *Choice>5){
             printf("\nWrong menu point, please provide another choice: ");
-            scanf("%d",Choice);
+            scanf(" %d",Choice);
         }
     while(*Choice!=5){
         switch (*Choice){
@@ -43,34 +44,36 @@ void fociklus(int* Choice, int** Matrix,int* dimension, bool* rotation, int* dir
             if (Matrix!=NULL){
             save_matrix(Matrix,*dimension,*direction,*rotation);
             } else {
-                printf("There is no current matrix to be saved. Please generate one!\n");
+                printf("There is no current matrix to be saved. Please generate or import one!\n");
             }
             break;
         case 4:
-            printf("Provide the attributes of the matrix being imported: ");
-            get_dimension(dimension);
-            get_direction(direction);
-            get_rotation(rotation);
-            import_matrix(&Matrix,*dimension);
+            get_filename(file_name);
+            printf("filename: %s", file_name);
+            if (_access(file_name, 0) == -1) {
+                printf("File doesn't exist.\n");
+            } else {
+                free_matrix(&Matrix,*dimension);
+                printf("Provide the attributes of the matrix being imported: ");
+                get_dimension(dimension);
+                get_direction(direction);
+                get_rotation(rotation);
+                import_matrix(&Matrix,*dimension,file_name);
+            }   
             break;
         }
         print_menu_header();
-        scanf("%d",Choice);
+        scanf(" %d",Choice);
     }  
     free_matrix(&Matrix,*dimension);
 }
 
-void print_menu_header(){
-    printf("    |#################################|\n    |#### Spiral Matrix Generator ####|\n    |#################################|\n\n       /0/ : User guide\n       /1/ : Generate a matrix\n       /2/ : Print matrix to terminal\n       /3/ : Save matrix\n       /4/ : Import matrix from file\n       /5/ : Quit the program\n\nChoice: ");
+void print_menu_header(){ // ,/
+    printf("\n    |#################################|\n    |#### Spiral Matrix Generator ####|\n    |#################################|\n\n       /0/ : User guide\n       /1/ : Generate a matrix\n       /2/ : Print matrix to terminal\n       /3/ : Save matrix\n       /4/ : Import matrix from file\n       /5/ : Quit the program\n\nChoice: ");
 
 }
 
-int menu(){
-    print_menu_header();
-    return 0;
-}
-
-void print_matrix(int** Matrix, int N){
+void print_matrix(int** Matrix, int N){  //,/
     int actual_num;
     for (int i=0; i<N; i++){
         for (int j=0; j<N; j++){
@@ -87,23 +90,16 @@ void print_matrix(int** Matrix, int N){
     }
 }
 
-void print_user_guide(){
+void print_user_guide(){ // ,/
     printf("        /0/ : User guide: Short description of the program.\n       /1/ : Generate a matrix: The user should give 3 parameters when asked: the dimension of the matrix (N:[1..20]), the starting direction\n        (D:['balra','fel','jobbbra','le']), and the direction of rotation (R:['cw','ccw']).    \n       /2/ : Print matrix to terminal : Prints the matrix onto the standard output (which is by standard the terminal). \n       /3/ : Save matrix : Saves the matrix into a text file. The name indicates the attributes of the matrix, like this: \"spiralNDR.txt, where N is the dimension of the matrix,\n          D is the direction of the matrix in the start, and R is the direction of rotation. \n       /4/ : Import matrix from file : Imports a matrix from file. This procedure clears the previous matrix from the memory. \n       /5/ : Quit the program : Choose this to exit. \n\n");
 }
 
-void generate_matrix(int*** Matrix, int N, int D, bool R){
+void generate_matrix(int*** Matrix, int N, int D, bool R){ // ,/
+    printf("\nGenerating the matrix...\n");
     *Matrix=(int**)malloc(N*sizeof(int *));
     for (int i=0; i<N; i++){
         (*Matrix)[i]=(int*)malloc(N*sizeof(int));
     }
-    /*
-    for(int i=0;i<N;i++){
-        for (int j=0; j<N;j++){
-            (*Matrix)[i][j]=(i+1)*(j+1);
-        }
-    }
-    */
-   printf("%d",R);
    int actual_num=1;
    int actual_num_of_increases=1;
    int block_increases=2;
@@ -158,8 +154,8 @@ void generate_matrix(int*** Matrix, int N, int D, bool R){
         }
    }
     while (actual_num<=N*N){
-        printf("n: %d d: %d\n ",actual_num,actual_dir);
-        printf("i: %d j: %d\n\n,", i, j);
+        //printf("n: %d d: %d\n ",actual_num,actual_dir);
+        //printf("i: %d j: %d\n\n,", i, j);
         (*Matrix)[i][j]=actual_num;
         switch (actual_dir){
             case 0: i-=1; break;
@@ -190,27 +186,29 @@ void generate_matrix(int*** Matrix, int N, int D, bool R){
                 }
             }
         }   
-        printf("\ni_l: %d a_i_l: %d b_i_l: %d\n",increases_left, actual_num_of_increases, block_increases_left);
+        //printf("\ni_l: %d a_i_l: %d b_i_l: %d\n",increases_left, actual_num_of_increases, block_increases_left);
     }
+    printf("Done!\n\n");
 }
 
-void get_dimension(int* dim){
+void get_dimension(int* dim){ // ,/
     int N;
     printf("N: ");
-    scanf("%d",&N);
+    scanf(" %d",&N);
     while (N<0 || N>20){
             printf("\nWrong number for dimension, please provide another number: ");
-            scanf("%d",&N);
+            scanf(" %d",&N);
         }
     *dim=N;
 }
-void get_direction(int* dir){
+
+void get_direction(int* dir){ // ,/
     char cD;
     printf("Direction: ");
-    cD=fgetc(stdin);
-    while (strcmp(&cD,"j")==0 || strcmp(&cD,"b")==0 || strcmp(&cD,"l")==0 || strcmp(&cD,"f")==0){
+    scanf(" %c",&cD);
+    while (cD!='j' && cD!='l' && cD!='f' && cD!='b'){
             printf("\nWrong character as direction, please provide another character: ");
-            scanf("%c",&cD);
+            scanf(" %c",&cD);
         }
     switch (cD){
         case 'f': *dir=0; break;
@@ -219,13 +217,13 @@ void get_direction(int* dir){
         case 'l': *dir=2; break;
     }
 }
-void get_rotation(bool* rot){
-    char* sR=(char*)malloc(4*sizeof(char));
+void get_rotation(bool* rot){ // ,/
+    char sR[4];
     printf("Rotation: ");
-    scanf("%s",sR);
-    while (strcmp(sR,"cw")==0 || strcmp(sR,"ccw")==0){
-            printf("\nWrong character as direction, please provide another character: ");
-            scanf("%s",sR);
+    scanf(" %s",sR);
+    while (strcmp(sR,"cw")!=0 && strcmp(sR,"ccw")!=0){
+            printf("\nWrong input(%s) for rotation, please provide another one: ", sR);
+            scanf(" %s",sR);
         }
     if (strcmp(sR,"cw")==0){
         *rot=0;
@@ -234,14 +232,14 @@ void get_rotation(bool* rot){
     }
 }
 
-void free_matrix(int ***matrix, int N){
+void free_matrix(int ***matrix, int N){ // ,/
     for (int i = 0; i < N; i++) {
             free((*matrix)[i]);
         }
     free(*matrix);
 }
 
-void save_matrix(int** Matrix,int dimension, int direction,bool rotation){
+void save_matrix(int** Matrix,int dimension, int direction,bool rotation){ // ,/ 
     char* sdim;
     int fs=6; // filename size, kezdetben size("spiral")
     if (dimension<10){
@@ -305,15 +303,15 @@ void save_matrix(int** Matrix,int dimension, int direction,bool rotation){
     fclose(f);
 }
 
-int import_matrix(int*** Matrix,int dimension){
-    char* file_name=(char*)malloc(15*sizeof(char));
+void get_filename(char file_name[13]){
+    //file_name=(char*)malloc(13*sizeof(char));
     printf("Please provide a file name: ");
-    scanf("%s",file_name);
+    scanf(" %s",file_name);
+   // printf("filename: \"%s\"",file_name);
     printf("\n");
-    if (_access(file_name, 0) == -1) {
-        printf("File can't be found.\n");
-        return -1;
-    } else {
+}
+
+int import_matrix(int*** Matrix,int dimension, char* file_name){
         FILE*  f = fopen(file_name, "r");
         free(&(*Matrix));
         *Matrix=(int**)malloc((dimension)*sizeof(int *));
@@ -323,13 +321,13 @@ int import_matrix(int*** Matrix,int dimension){
         int actual_num;
         for (int i=0; i<dimension; i++){
             for (int j=0; j<dimension; j++){
-                fscanf(f,"%d", &actual_num);
+                fscanf(f," %d", &actual_num);
                 (*Matrix)[i][j]=actual_num;
             }
             fgetc(f);
         }   
         
         fclose(f);
-    }
+    free(file_name);
     return 0;
 }

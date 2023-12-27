@@ -3,6 +3,7 @@
 
 #include <string.h>
 #include <stdbool.h>
+#include <stdio.h>
 
 void generate_matrix(int*** Matrix, int N, int D, bool R);
 void free_matrix(int*** matrix, int N);
