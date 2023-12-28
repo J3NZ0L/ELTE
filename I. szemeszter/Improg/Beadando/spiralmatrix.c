@@ -6,7 +6,7 @@
 
 int main(){
     int** actual_matrix=NULL;
-    char file_name[13];
+    char* file_name=NULL;
     int dim;
     bool rotation; //cw
     int direction; //f
@@ -14,31 +14,38 @@ int main(){
 
     int choice; // Elso valasztas bekerese
     scanf("%d",&choice);
-    fociklus(&choice,actual_matrix,&dim,&rotation,&direction, file_name);
+    fociklus(&choice,actual_matrix,&dim,&rotation,&direction,&file_name);
 
     return 0;
 }
 
-void fociklus(int* Choice, int** Matrix,int* dimension, bool* rotation, int* direction, char* file_name){
+void fociklus(int* Choice, int** Matrix,int* dimension, bool* rotation, int* direction, char** file_name){
     printf("\n"); 
-    while (*Choice<0 || *Choice>5){
+   
+    while(*Choice!=5){
+        while (*Choice<0 || *Choice>5){
             printf("\nWrong menu point, please provide another choice: ");
             scanf(" %d",Choice);
         }
-    while(*Choice!=5){
         switch (*Choice){
         case 0:
             print_user_guide();
             break;
         case 1:
-            free_matrix(&Matrix,*dimension);
+            if (Matrix!=NULL) {
+                free_matrix(&Matrix,*dimension);
+            }
             get_dimension(dimension);
             get_direction(direction);
             get_rotation(rotation);
             generate_matrix(&Matrix,*dimension,*direction,*rotation);
             break;
         case 2:
-            print_matrix(Matrix,*dimension);
+            if (Matrix!=NULL){
+                print_matrix(Matrix,*dimension);
+            } else {
+                printf("There is no current matrix to be printed. Please generate or import one!\n");
+            }
             break;
         case 3:
             if (Matrix!=NULL){
@@ -49,23 +56,32 @@ void fociklus(int* Choice, int** Matrix,int* dimension, bool* rotation, int* dir
             break;
         case 4:
             get_filename(file_name);
-            printf("filename: %s", file_name);
-            if (_access(file_name, 0) == -1) {
+            if (_access(*file_name, 0) == -1) {
                 printf("File doesn't exist.\n");
             } else {
-                free_matrix(&Matrix,*dimension);
+                if (Matrix!=NULL) {
+                    free_matrix(&Matrix,*dimension);
+                }
                 printf("Provide the attributes of the matrix being imported: ");
                 get_dimension(dimension);
                 get_direction(direction);
                 get_rotation(rotation);
                 import_matrix(&Matrix,*dimension,file_name);
             }   
+            free(file_name);
             break;
         }
+        if (*Choice!=5){
         print_menu_header();
         scanf(" %d",Choice);
+        }
     }  
-    free_matrix(&Matrix,*dimension);
+    if (Matrix!=NULL) {
+        free_matrix(&Matrix,*dimension);
+    }
+    if (file_name!=NULL){
+        free(file_name);
+    }
 }
 
 void print_menu_header(){ // ,/
@@ -91,7 +107,7 @@ void print_matrix(int** Matrix, int N){  //,/
 }
 
 void print_user_guide(){ // ,/
-    printf("        /0/ : User guide: Short description of the program.\n       /1/ : Generate a matrix: The user should give 3 parameters when asked: the dimension of the matrix (N:[1..20]), the starting direction\n        (D:['balra','fel','jobbbra','le']), and the direction of rotation (R:['cw','ccw']).    \n       /2/ : Print matrix to terminal : Prints the matrix onto the standard output (which is by standard the terminal). \n       /3/ : Save matrix : Saves the matrix into a text file. The name indicates the attributes of the matrix, like this: \"spiralNDR.txt, where N is the dimension of the matrix,\n          D is the direction of the matrix in the start, and R is the direction of rotation. \n       /4/ : Import matrix from file : Imports a matrix from file. This procedure clears the previous matrix from the memory. \n       /5/ : Quit the program : Choose this to exit. \n\n");
+    printf("       /0/ : User guide: Short description of the program.\n       /1/ : Generate a matrix: The user should give 3 parameters when asked: the dimension of the matrix (N:[1..20]), the starting direction\n        (D:['balra','fel','jobbbra','le']), and the direction of rotation (R:['cw','ccw']).    \n       /2/ : Print matrix to terminal : Prints the matrix onto the standard output (which is by standard the terminal). \n       /3/ : Save matrix : Saves the matrix into a text file. The name indicates the attributes of the matrix, like this: \"spiralNDR.txt, where N is the dimension of the matrix,\n          D is the direction of the matrix in the start, and R is the direction of rotation. \n       /4/ : Import matrix from file : Imports a matrix from file. This procedure clears the previous matrix from the memory. \n       /5/ : Quit the program : Choose this to exit. \n\n");
 }
 
 void generate_matrix(int*** Matrix, int N, int D, bool R){ // ,/
@@ -186,7 +202,6 @@ void generate_matrix(int*** Matrix, int N, int D, bool R){ // ,/
                 }
             }
         }   
-        //printf("\ni_l: %d a_i_l: %d b_i_l: %d\n",increases_left, actual_num_of_increases, block_increases_left);
     }
     printf("Done!\n\n");
 }
@@ -195,7 +210,7 @@ void get_dimension(int* dim){ // ,/
     int N;
     printf("N: ");
     scanf(" %d",&N);
-    while (N<0 || N>20){
+    while (N<1 || N>20){
             printf("\nWrong number for dimension, please provide another number: ");
             scanf(" %d",&N);
         }
@@ -222,7 +237,7 @@ void get_rotation(bool* rot){ // ,/
     printf("Rotation: ");
     scanf(" %s",sR);
     while (strcmp(sR,"cw")!=0 && strcmp(sR,"ccw")!=0){
-            printf("\nWrong input(%s) for rotation, please provide another one: ", sR);
+            printf("\nWrong input for rotation, please provide another one: ");
             scanf(" %s",sR);
         }
     if (strcmp(sR,"cw")==0){
@@ -240,6 +255,7 @@ void free_matrix(int ***matrix, int N){ // ,/
 }
 
 void save_matrix(int** Matrix,int dimension, int direction,bool rotation){ // ,/ 
+    printf("\nSaving the matrix...\n");
     char* sdim;
     int fs=6; // filename size, kezdetben size("spiral")
     if (dimension<10){
@@ -253,9 +269,9 @@ void save_matrix(int** Matrix,int dimension, int direction,bool rotation){ // ,/
     sdir=(char*)malloc(sizeof(char));
     char* srot;
     if (rotation){ //cw
-    srot=(char*)malloc(2*sizeof(char));
-    } else{
     srot=(char*)malloc(3*sizeof(char));
+    } else{
+    srot=(char*)malloc(2*sizeof(char));
     }
     sprintf(sdim,"%d",dimension);
     char cdir;
@@ -272,10 +288,10 @@ void save_matrix(int** Matrix,int dimension, int direction,bool rotation){ // ,/
     fs+=1;
     sprintf(sdir,"%c",cdir);
     if (rotation){
-        sprintf(srot,"%s","cw");
+        sprintf(srot,"%s","ccw");
         fs+=2;
     } else{
-        sprintf(srot,"%s","ccw");
+        sprintf(srot,"%s","cw");
         fs+=3;
     }
     char* file_name=(char*)malloc(fs*sizeof(char));
@@ -301,18 +317,21 @@ void save_matrix(int** Matrix,int dimension, int direction,bool rotation){ // ,/
         fprintf(f,"\n");
     }   
     fclose(f);
+    free(sdim);
+    free(srot);
+    free(sdir);
+    printf("Done!\n\n");
 }
 
-void get_filename(char file_name[13]){
-    //file_name=(char*)malloc(13*sizeof(char));
+void get_filename(char** file_name){ // ,/
+    *file_name=(char*)malloc(14*sizeof(char));
     printf("Please provide a file name: ");
-    scanf(" %s",file_name);
-   // printf("filename: \"%s\"",file_name);
+    scanf(" %s",*file_name);
     printf("\n");
 }
 
-int import_matrix(int*** Matrix,int dimension, char* file_name){
-        FILE*  f = fopen(file_name, "r");
+int import_matrix(int*** Matrix,int dimension, char** file_name){
+        FILE*  f = fopen(*file_name, "r");
         free(&(*Matrix));
         *Matrix=(int**)malloc((dimension)*sizeof(int *));
         for (int i=0; i<dimension; i++){
@@ -328,6 +347,6 @@ int import_matrix(int*** Matrix,int dimension, char* file_name){
         }   
         
         fclose(f);
-    free(file_name);
+    free(*file_name);
     return 0;
 }

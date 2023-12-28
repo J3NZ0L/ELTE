@@ -6,7 +6,7 @@
 #include <io.h>
 #include <stdbool.h>
 
-int import_matrix(int*** Matrix,int dimension, char* file_name);
-void get_filename(char file_name[13]);
+int import_matrix(int*** Matrix,int dimension, char** file_name);
+void get_filename(char** file_name);
 
 #endif //MATRIX_IMPORTER_H
