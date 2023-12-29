@@ -3,6 +3,7 @@
         "stdio.h": "c",
         "matrix_saver.h": "c",
         "menu.h": "c",
-        "matrix_generator.h": "c"
+        "matrix_generator.h": "c",
+        "string.h": "c"
     }
 }

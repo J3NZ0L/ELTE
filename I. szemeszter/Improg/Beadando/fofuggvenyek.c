@@ -45,7 +45,7 @@ void fociklus(int* Choice, int** Matrix,int* dimension, bool* rotation, int* dir
             if (Matrix!=NULL) {
                 free_matrix(&Matrix,*dimension);
             }
-            printf("Provide the attributes of the matrix being imported: ");
+            printf("Provide the attributes of the matrix being imported: \n");
             get_dimension(dimension);
             get_direction(direction);
             get_rotation(rotation);
@@ -153,8 +153,6 @@ void generate_matrix(int*** Matrix, int N, int D, bool R){ // ,/
         }
    }
     while (actual_num<=N*N){
-        //printf("n: %d d: %d\n ",actual_num,actual_dir);
-        //printf("i: %d j: %d\n\n,", i, j);
         (*Matrix)[i][j]=actual_num;
         switch (actual_dir){
             case 0: i-=1; break;
@@ -189,7 +187,7 @@ void generate_matrix(int*** Matrix, int N, int D, bool R){ // ,/
     printf("Done!\n\n");
 }
 
-void save_matrix(int** Matrix,int dimension, int direction,bool rotation){ // 
+void save_matrix(int** Matrix,int dimension, int direction,bool rotation){ // ,/
     printf("\nSaving the matrix...\n");
     char* sdim;
     int fs=6; // filename size, kezdetben strlen("spiral")
@@ -207,7 +205,7 @@ void save_matrix(int** Matrix,int dimension, int direction,bool rotation){ //
     } else{
     srot=(char*)malloc(3*sizeof(char));
     }
-    sdim=itostr(dimension,2); // ,/
+    sdim=itostr(dimension); // ,/
     char cdir;
     switch (direction){
         case 0: cdir='f';

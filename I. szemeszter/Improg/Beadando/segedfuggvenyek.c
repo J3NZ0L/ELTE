@@ -59,22 +59,19 @@ void get_filename(char** file_name){ // ,/
     printf("\n");
 }
 
-char* itostr(int num,int maxlength){ // nem okes, forditva irja ketjegyu szamokat
-    char* str=malloc((maxlength+1)*sizeof(char));
-    int remainder;
-    int i=0;
-    if (num==0){
-        str[i]='0';
-        str[i+1]='\0';
-    } else if (num>0){
-        while(num!=0){
-            remainder=num%10;
-            str[i++]=remainder+'0';
-            num=num/10;
-        }
-        str[i]='\0';
-    } else {
-        str=NULL;
-    }
+char* itostr(int num){ // nem okes, forditva irja ketjegyu szamokat
+    char* str = (char*)malloc(sizeof(char) * 3);
+    if (num < 10) {
+        str[0] = num + '0';
+        str[1] = '\0';
+    } else if (num < 20) {
+        str[0] = '1';
+        str[1] = num % 10 + '0';
+        str[2] = '\0';
+    } else if (num == 20) {
+        str[0] = '2';
+        str[1] = '0';
+        str[2] = '\0';
+    };
     return str;
 }
