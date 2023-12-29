@@ -4,15 +4,20 @@
 #include "matrix_saver.h"
 #include "matrix_importer.h"
 
-void get_dimension(int* dim){ // ,/
-    int N;
+void get_dimension(int* dim){ // valamiert tesz egy \n-t choice utan es dimbeker elott, amugy kiraly
+    char input[100];
+    int num;
     printf("N: ");
-    scanf(" %d",&N);
-    while (N<1 || N>20){
-            printf("\nWrong number for dimension, please provide another number: ");
-            scanf(" %d",&N);
-        }
-    *dim=N;
+    char c; //karakter a bentmaradt \n-ek elfogyasztasahoz
+    while ((c = getchar()) != '\n' && c != EOF);
+    fgets(input, sizeof(input), stdin);
+    input[strcspn(input, "\n")] = '\0';
+    while (sscanf(input, " %d", &num) != 1 || strspn(input, "0123456789") != strlen(input) || num < 1 || num > 20 ){
+        printf("\nWrong number for dimension, please provide another number: ");
+        fgets(input, sizeof(input), stdin);
+        input[strcspn(input, "\n")] = '\0';
+    }
+    *dim=num;
 }
 
 void get_direction(int* dir){ // ,/
@@ -59,7 +64,7 @@ void get_filename(char** file_name){ // ,/
     printf("\n");
 }
 
-char* itostr(int num){ // nem okes, forditva irja ketjegyu szamokat
+char* itostr(int num){ // ,/
     char* str = (char*)malloc(sizeof(char) * 3);
     if (num < 10) {
         str[0] = num + '0';
