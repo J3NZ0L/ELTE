@@ -3,10 +3,9 @@
 
 #include <stdio.h>
 #include <string.h>
-#include <io.h>
 #include <stdbool.h>
 
-int import_matrix(int*** Matrix,int dimension, char** file_name);
+void import_matrix(int*** Matrix,int dimension,  FILE** f);
 void get_filename(char** file_name);
 
 #endif //MATRIX_IMPORTER_H
