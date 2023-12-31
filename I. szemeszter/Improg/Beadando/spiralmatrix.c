@@ -14,7 +14,7 @@ int main(){
     print_menu_header(); //Elso menu kiiratas
 
     int choice; // Elso valasztas bekerese
-    scanf("%d",&choice);
+    get_choice(&choice);
     fociklus(&choice,actual_matrix,&dim,&rotation,&direction,&file_name,&f);
     return 0;
 }

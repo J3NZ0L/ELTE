@@ -8,10 +8,6 @@ void fociklus(int* Choice, int** Matrix,int* dimension, bool* rotation, int* dir
     printf("\n"); 
    
     while(*Choice!=5){
-        while (*Choice<0 || *Choice>5){
-            printf("\nWrong menu point, please provide another choice: ");
-            scanf(" %d",Choice);
-        }
         switch (*Choice){
         case 0:
             print_user_guide();
@@ -42,21 +38,22 @@ void fociklus(int* Choice, int** Matrix,int* dimension, bool* rotation, int* dir
         case 4:
             get_filename(file_name);
             *f = fopen(*file_name, "r");
-            if (Matrix!=NULL) {
-                free_matrix(&Matrix,*dimension);
+                if (*f!=NULL){
+                if (Matrix!=NULL) {
+                    free_matrix(&Matrix,*dimension);
+                }
+                attributes_from_file_name(dimension,direction,rotation, *file_name);
+                import_matrix(&Matrix,*dimension,f);
+                fclose(*f);
+                free(file_name);
+            } else {
+                printf("File cannot be found.\n");
             }
-            printf("Provide the attributes of the matrix being imported: \n");
-            get_dimension(dimension);
-            get_direction(direction);
-            get_rotation(rotation);
-            import_matrix(&Matrix,*dimension,f);
-            fclose(*f);
-            free(file_name);
             break;
         }
         if (*Choice!=5){
         print_menu_header();
-        scanf(" %d",Choice);
+        get_choice(Choice);
         }
     }  
     if (Matrix!=NULL) {
@@ -257,7 +254,8 @@ void save_matrix(int** Matrix,int dimension, int direction,bool rotation){ // ,/
     printf("Saved as \"%s\" to the current directory.\n\n",file_name);
 }
 
-void import_matrix(int*** Matrix,int dimension, FILE** f){
+void import_matrix(int*** Matrix,int dimension,FILE** f){
+        printf("\nImporting matrix...\n");
         *Matrix=(int**)malloc((dimension)*sizeof(int *));
         for (int i=0; i<dimension; i++){
             (*Matrix)[i]=(int*)malloc((dimension)*sizeof(int));
@@ -270,4 +268,6 @@ void import_matrix(int*** Matrix,int dimension, FILE** f){
             }
             fgetc(*f);
         }   
+        printf("\nDone!\n");
 }
+
