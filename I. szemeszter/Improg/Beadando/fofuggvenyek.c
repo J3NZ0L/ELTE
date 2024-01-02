@@ -6,7 +6,7 @@
 
 void fociklus(int* Choice, int** Matrix,int* dimension, bool* rotation, int* direction, char** file_name, FILE** f){ // ,/
     printf("\n"); 
-   
+   int returnval=0;
     while(*Choice!=5){
         switch (*Choice){
         case 0:
@@ -16,7 +16,9 @@ void fociklus(int* Choice, int** Matrix,int* dimension, bool* rotation, int* dir
             if (Matrix!=NULL) {
                 free_matrix(&Matrix,*dimension);
             }
-            get_dimension(dimension);
+            if(get_dimension(dimension)!=-1){
+                
+            };
             get_direction(direction);
             get_rotation(rotation);
             generate_matrix(&Matrix,*dimension,*direction,*rotation);
@@ -51,7 +53,7 @@ void fociklus(int* Choice, int** Matrix,int* dimension, bool* rotation, int* dir
             }
             break;
         }
-        if (*Choice!=5){
+        if (*Choice!=5 && returnval!=-1){
         print_menu_header();
         get_choice(Choice);
         }
@@ -87,7 +89,7 @@ void print_matrix(int** Matrix, int N){  //,/
 }
 
 void print_user_guide(){ // ,/
-    printf("       /0/ : User guide: Short description of the program.\n       /1/ : Generate a matrix: The user should give 3 parameters when asked: the dimension of the matrix (N:[1..20]), the starting direction\n        (D:['balra','fel','jobbbra','le']), and the direction of rotation (R:['cw','ccw']).    \n       /2/ : Print matrix to terminal : Prints the matrix onto the standard output (which is by standard the terminal). \n       /3/ : Save matrix : Saves the matrix into a text file. The name indicates the attributes of the matrix, like this: \"spiralNDR.txt, where N is the dimension of the matrix,\n          D is the direction of the matrix in the start, and R is the direction of rotation. \n       /4/ : Import matrix from file : Imports a matrix from file. This procedure clears the previous matrix from the memory. \n       /5/ : Quit the program : Choose this to exit. \n\n");
+    printf("       /0/ : User guide: Short description of the program.\n       /1/ : Generate a matrix: The user should give 3 parameters when asked: the dimension of the matrix (N:[1..20]), the starting direction\n        (D:['b','f','j','l']), and the direction of rotation (R:['cw','ccw']).    \n       /2/ : Print matrix to terminal : Prints the matrix onto the standard output (which is by standard the terminal). \n       /3/ : Save matrix : Saves the matrix into a text file. The name indicates the attributes of the matrix, like this: \"spiralNDR.txt, where N is the dimension of the matrix,\n          D is the direction of the matrix in the start, and R is the direction of rotation. \n       /4/ : Import matrix from file : Imports a matrix from file. This procedure clears the previous matrix from the memory. \n       /5/ : Quit the program : Choose this to exit. \n\n");
 }
 
 void generate_matrix(int*** Matrix, int N, int D, bool R){ // ,/
@@ -252,6 +254,7 @@ void save_matrix(int** Matrix,int dimension, int direction,bool rotation){ // ,/
     free(srot);
     free(sdir);
     printf("Saved as \"%s\" to the current directory.\n\n",file_name);
+    free(file_name);
 }
 
 void import_matrix(int*** Matrix,int dimension,FILE** f){
