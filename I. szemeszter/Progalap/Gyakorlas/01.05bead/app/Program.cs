@@ -1,8 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ConsoleApp1
 {
-
     internal class Program
     {
         #region Maximum-, minimumkiválasztás
@@ -116,10 +116,8 @@ namespace ConsoleApp1
             }
             return (minert);
         }
-        
         static void Main(string[] args)
         {
-            //Bekeres
             string S=Console.ReadLine();
             int N=int.Parse(S.Split(' ')[0]);
             int M = int.Parse(S.Split(' ')[1]);            
@@ -149,13 +147,12 @@ namespace ConsoleApp1
                 }
             }
             //Kimenet
-            Console.Write(y.Count());
+            Console.Write(y.Count);
             Console.Write(' ');
-            for (int i=0; i<y.Count(); i++)
+            for (int i=0; i<y.Count; i++)
             {
                 Console.Write((y[i]+1) + " ");
             }
-           
         }
     }
 }
