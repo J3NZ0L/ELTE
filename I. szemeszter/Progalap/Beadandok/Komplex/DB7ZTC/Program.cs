@@ -122,7 +122,15 @@ namespace ConsoleApp1
             //Bekeres
             string S=Console.ReadLine();
             int N=int.Parse(S.Split(' ')[0]);
-            int M = int.Parse(S.Split(' ')[1]);            
+            if (N<1 || N > 1000)
+            {
+                Console.WriteLine("Hibas adat");
+            }
+            int M = int.Parse(S.Split(' ')[1]);
+            if (M < 1 || M > 1000)
+            {
+                Console.WriteLine("Hibas adat");
+            }
             int[,] elorejelzes=new int[N,M];
             string[] sorbaszamok = new string[M];
    
@@ -132,6 +140,10 @@ namespace ConsoleApp1
                 for (int j=0; j<M; j++)
                 {
                     elorejelzes[i, j] = int.Parse(sorbaszamok[j]);
+                    if (elorejelzes[i, j] < -50 || elorejelzes[i, j] > 50)
+                    {
+                        Console.WriteLine("Hibas adat");
+                    }
                 }
             }
             int vsoringadozasmin=soringadozasmin(N,M,elorejelzes);
