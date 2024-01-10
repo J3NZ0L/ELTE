@@ -1,8 +1,15 @@
-﻿using System;
+﻿/*
+  Készítette: Jeney Zoltán
+  Neptun: DB7ZTC
+  E-mail: jeneyzoltan2@gmail.com
+  Feladat: Legkisebb ingadozású települések
+*/
+
+using System;
+using System.Collections.Generic;
 
 namespace ConsoleApp1
 {
-
     internal class Program
     {
         #region Maximum-, minimumkiválasztás
@@ -117,27 +124,38 @@ namespace ConsoleApp1
             return (minert);
         }
         
+        
+
         static void Main(string[] args)
         {
             //Bekeres
             string S=Console.ReadLine();
-            int N=int.Parse(S.Split(' ')[0]);
-            if (N<1 || N > 1000)
+            int N;
+            int M;
+            while (!int.TryParse(S.Split(' ')[0], out N) || !int.TryParse(S.Split(' ')[1], out M))
             {
-                Console.WriteLine("Hibas adat");
+                Console.WriteLine("Hibas adat(ok), irja be ujra oket: ");
+                M = int.Parse(Console.ReadLine());
             }
-            int M = int.Parse(S.Split(' ')[1]);
-            if (M < 1 || M > 1000)
+
+            while (N < 1 || N > 1000)
             {
-                Console.WriteLine("Hibas adat");
+                Console.WriteLine("Hibas N ertek (tartomanyon kivul eso adat), irja be ujra: ");
+                N=int.Parse(Console.ReadLine());
             }
-            int[,] elorejelzes=new int[N,M];
+
+            while (M < 1 || M > 1000)
+            {
+                Console.WriteLine("Hibas M ertek (tartomanyon kivul eso adat), irja be ujra: ");
+                M=int.Parse(Console.ReadLine());
+            }
+            int[,] elorejelzes = new int[N, M];
             string[] sorbaszamok = new string[M];
-   
-            for (int i=0; i<N; i++)
+
+            for (int i = 0; i < N; i++)
             {
-                sorbaszamok= (Console.ReadLine().Split(' '));
-                for (int j=0; j<M; j++)
+                sorbaszamok = (Console.ReadLine().Split(' '));
+                for (int j = 0; j < M; j++)
                 {
                     elorejelzes[i, j] = int.Parse(sorbaszamok[j]);
                     if (elorejelzes[i, j] < -50 || elorejelzes[i, j] > 50)
@@ -146,14 +164,14 @@ namespace ConsoleApp1
                     }
                 }
             }
-            int vsoringadozasmin=soringadozasmin(N,M,elorejelzes);
+            int vsoringadozasmin = soringadozasmin(N, M, elorejelzes);
             bool T(int k)
             {
                 return vsoringadozasmin == soringadozas(k, M, elorejelzes);
             }
             //Kivalogatas
-            List<int> y=new List<int>();            
-            for (int i=0; i<N; i++)
+            List<int> y = new List<int>();
+            for (int i = 0; i < N; i++)
             {
                 if (T(i))
                 {
@@ -161,13 +179,12 @@ namespace ConsoleApp1
                 }
             }
             //Kimenet
-            Console.Write(y.Count());
+            Console.Write(y.Count);
             Console.Write(' ');
-            for (int i=0; i<y.Count(); i++)
+            for (int i = 0; i < y.Count; i++)
             {
-                Console.Write((y[i]+1) + " ");
-            }
-           
+                Console.Write((y[i] + 1) + " ");
+            }            
         }
     }
 }
