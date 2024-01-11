@@ -1,4 +1,8 @@
-﻿namespace ConsoleApp1
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace ConsoleApp1
 {
     internal class Program
     {
@@ -6,6 +10,17 @@
         {
             public int mennyiseg;
             public int ar;
+        }
+        public static int maxkiv (Bor[] tomb, int n){
+            int max = tomb[0].mennyiseg;
+            for (int i = 0; i<n; i++)
+            {
+                if (max< tomb[i].mennyiseg)
+                {
+                    max = tomb[i].mennyiseg;
+                }
+            }
+            return max;
         }
         static void Main(string[] args)
         {
@@ -35,13 +50,69 @@
             {
                 for (int i = 0; i< evek2000.Count; i++)
                 {
-                    Console.Write(evek2000[i]);
+                    Console.Write(evek2000[i]+" ");
                 }
             }
-                //2. feladat: Eldöntés
+            Console.WriteLine();
+            //2. feladat: 
+            {
+                bool volte = false;
+                int egybedb = 0;
 
-                //3. feladat: Kiválogatás
+                int i = 1;
+                while (!volte && i < bortomb.GetLength(0))
+                {
+                    if (bortomb[i].mennyiseg > bortomb[i - 1].mennyiseg)
+                    {
+                        egybedb++;
+                    }
+                    else
+                    {
+                        egybedb = 1;
+                    }
+                    if (egybedb == K)
+                    {
+                        volte = true;
+                    }
+                    i++;
+                }
 
+                if (volte)
+                {
+                    Console.WriteLine("IGEN");
+                } else
+                {
+                    Console.WriteLine("NEM");
+                }
             }
+            //3. feladat: Kiválogatás
+            {
+                if (bortomb.GetLength(0) <= 1)
+                {
+                    Console.WriteLine(0);
+                }
+                else
+                {
+                    List<int> list = new List<int>();
+                    for (int i = 1; i < bortomb.GetLength(0); i++)
+                    {
+                        if (maxkiv(bortomb, i) < bortomb[i].mennyiseg)
+                        {
+                            list.Add(i+1);
+                        }
+                    }
+                    if (list.Count > 0)
+                    {
+                        Console.Write(list.Count + " ");
+                        list.OrderBy(n => n);
+                        for (int i = 0; i < list.Count; i++) { Console.Write(list[i] + " "); }
+                    } else
+                    {
+                        Console.WriteLine(0);
+                    }
+                }
+            }
+
+        }
     }
 }

@@ -99,21 +99,21 @@ namespace ConsoleApp1
         #endregion
         public static int soringadozas(int i, int M, int[,] Matr)
         {
-            int[] vec= new int[M];
-            for (int j = 0; j<M; j++)
+            int[] vec = new int[M];
+            for (int j = 0; j < M; j++)
             {
                 vec[j] = Matr[i, j];
             }
-            int maxind, maxert,minert,minind;
-            (maxind,maxert)=Max(vec, (a,b) => a>b);
-            (minind, minert) = Min(vec, (a, b) => a<b);
+            int maxind, maxert, minert, minind;
+            (maxind, maxert) = Max(vec, (a, b) => a > b);
+            (minind, minert) = Min(vec, (a, b) => a < b);
             return (Math.Abs(minert - maxert));
         }
         public static int soringadozasmin(int N, int M, int[,] Matr)
         {
             int seged;
-            int minert=soringadozas(0,M,Matr);
-            for (int i=0; i<N; i++)
+            int minert = soringadozas(0, M, Matr);
+            for (int i = 0; i < N; i++)
             {
                 seged = soringadozas(i, M, Matr);
                 if (minert > seged)
@@ -123,35 +123,106 @@ namespace ConsoleApp1
             }
             return (minert);
         }
-        
-        
+
+
 
         static void Main(string[] args)
         {
-            //Bekeres
-            string S=Console.ReadLine();
+            //bemeneti változó deklarálása
+            int[,] elorejelzes;
+            //kimenet deklarálása
+            List<int> y = new List<int>();
+            elorejelzes = bekeres();
+            y = kivalogatas(elorejelzes);
+            kiiratas(y);
+        }
+
+        static void kiiratas(List<int> y)
+        {
+            Console.Write(y.Count);
+            Console.Write(' ');
+            for (int i = 0; i < y.Count; i++)
+            {
+                Console.Write((y[i] + 1) + " ");
+            }
+        }
+        static List<int> kivalogatas(int[,] matrix)
+        {
+            List<int> y = new List<int>();
+            int vsoringadozasmin = soringadozasmin(matrix.GetLength(0), matrix.GetLength(1), matrix);
+            bool T(int k)
+            {
+                return vsoringadozasmin == soringadozas(k, matrix.GetLength(1), matrix);
+            }
+            //Kivalogatas
+
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                if (T(i))
+                {
+                    y.Add(i);
+                }
+            }
+            return y;
+        }
+        static int[,] bekeres()
+        {
+            {
+                if (Console.IsInputRedirected)
+                {
+                    return bekeres_biro();
+                }
+                else
+                {
+                    return bekeres_kezi();
+                }
+            }
+        }
+
+        public static int[,] bekeres_biro()
+        {
+            string S = Console.ReadLine();
             int N;
             int M;
+            M = int.Parse(S.Split(' ')[1]);
+            N = int.Parse(S.Split(' ')[0]);
+            string[] sorbaszamok = new string[M];
+            int[,] elorejelzes = new int[N, M];
+            for (int i = 0; i < N; i++)
+            {
+                sorbaszamok = (Console.ReadLine().Split(' '));
+                for (int j = 0; j < M; j++)
+                {
+                    elorejelzes[i, j] = int.Parse(sorbaszamok[j]);
+                }
+            }
+            return elorejelzes;
+        }
+        static int[,] bekeres_kezi() { 
+            string S = Console.ReadLine();
+            int N;
+            int M;
+            Console.WriteLine("Irja be szokozzel elvalasztva, hany telepules es hany nap van!");
             while (!int.TryParse(S.Split(' ')[0], out N) || !int.TryParse(S.Split(' ')[1], out M))
             {
-                Console.WriteLine("Hibas adat(ok), irja be ujra oket: ");
+                Console.WriteLine("Hibas (nem szamertekkel biro) adat(ok), irja be ujra oket: ");
                 M = int.Parse(Console.ReadLine());
             }
 
             while (N < 1 || N > 1000)
             {
-                Console.WriteLine("Hibas N ertek (tartomanyon kivul eso adat), irja be ujra: ");
-                N=int.Parse(Console.ReadLine());
+                Console.WriteLine("Hibas telepules ertek (tartomanyon(1..1000) kivul eso adat), irja be ujra: ");
+                N = int.Parse(Console.ReadLine());
             }
 
             while (M < 1 || M > 1000)
             {
-                Console.WriteLine("Hibas M ertek (tartomanyon kivul eso adat), irja be ujra: ");
-                M=int.Parse(Console.ReadLine());
+                Console.WriteLine("Hibas nap ertek (tartomanyon(1..1000) kivul eso adat), irja be ujra: ");
+                M = int.Parse(Console.ReadLine());
             }
-            int[,] elorejelzes = new int[N, M];
+            Console.WriteLine("Irja be sorrol sorra a telepulesek napi homersekleteit:");
             string[] sorbaszamok = new string[M];
-
+            int[,] elorejelzes = new int[N, M];
             for (int i = 0; i < N; i++)
             {
                 sorbaszamok = (Console.ReadLine().Split(' '));
@@ -164,27 +235,7 @@ namespace ConsoleApp1
                     }
                 }
             }
-            int vsoringadozasmin = soringadozasmin(N, M, elorejelzes);
-            bool T(int k)
-            {
-                return vsoringadozasmin == soringadozas(k, M, elorejelzes);
-            }
-            //Kivalogatas
-            List<int> y = new List<int>();
-            for (int i = 0; i < N; i++)
-            {
-                if (T(i))
-                {
-                    y.Add(i);
-                }
-            }
-            //Kimenet
-            Console.Write(y.Count);
-            Console.Write(' ');
-            for (int i = 0; i < y.Count; i++)
-            {
-                Console.Write((y[i] + 1) + " ");
-            }            
-        }
+            return elorejelzes;
+        }                 
     }
 }
