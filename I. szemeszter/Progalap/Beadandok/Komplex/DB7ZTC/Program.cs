@@ -198,15 +198,15 @@ namespace ConsoleApp1
             }
             return elorejelzes;
         }
-        static int[,] bekeres_kezi() { 
+        static int[,] bekeres_kezi() {
+            Console.WriteLine("Irja be szokozzel elvalasztva, hany telepules es hany nap van!");
             string S = Console.ReadLine();
             int N;
             int M;
-            Console.WriteLine("Irja be szokozzel elvalasztva, hany telepules es hany nap van!");
             while (!int.TryParse(S.Split(' ')[0], out N) || !int.TryParse(S.Split(' ')[1], out M))
             {
                 Console.WriteLine("Hibas (nem szamertekkel biro) adat(ok), irja be ujra oket: ");
-                M = int.Parse(Console.ReadLine());
+                S = Console.ReadLine();
             }
 
             while (N < 1 || N > 1000)
